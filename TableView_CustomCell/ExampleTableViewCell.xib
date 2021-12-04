@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExampleTableViewCell" rowHeight="94" id="KGk-i7-Jjw" customClass="ExampleTableViewCell" customModule="TableView_CustomCell" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="488" height="94"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="488" height="94"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Fii-RB-ERU">
+                        <rect key="frame" x="15" y="10" width="458" height="74"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="p7x-uh-QJo">
+                                <rect key="frame" x="0.0" y="0.0" width="458" height="22"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOf-Wi-sph">
+                                        <rect key="frame" x="0.0" y="0.0" width="283" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7Vz-Jz-Phm">
+                                        <rect key="frame" x="383" y="0.0" width="75" height="22"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SU9-hC-kE4">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="Vt2-6V-9WW"/>
+                                                </constraints>
+                                                <state key="normal" image="pencil.tip.crop.circle.badge.plus" catalog="system"/>
+                                                <connections>
+                                                    <action selector="ButtonChange:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="K0L-aF-kRO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ot-MW-H7e">
+                                                <rect key="frame" x="40" y="0.0" width="35" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="2SL-5x-6EV"/>
+                                                </constraints>
+                                                <state key="normal" image="trash" catalog="system"/>
+                                                <connections>
+                                                    <action selector="ButtonDelete:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lyl-Dk-DjU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fQm-oW-LDd">
+                                <rect key="frame" x="0.0" y="37" width="458" height="38"/>
+                                <segments>
+                                    <segment title="a"/>
+                                    <segment title="b"/>
+                                    <segment title="c"/>
+                                    <segment title="d"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemGreenColor"/>
+                                <connections>
+                                    <action selector="segmentAction:" destination="KGk-i7-Jjw" eventType="valueChanged" id="UY9-uz-d3r"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Fii-RB-ERU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="0JW-Dh-jlt"/>
+                    <constraint firstAttribute="bottom" secondItem="Fii-RB-ERU" secondAttribute="bottom" constant="10" id="Uez-M3-muZ"/>
+                    <constraint firstItem="Fii-RB-ERU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Zyt-Xr-PQT"/>
+                    <constraint firstAttribute="trailing" secondItem="Fii-RB-ERU" secondAttribute="trailing" constant="15" id="hqU-jP-hbS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="ChangeOutlet" destination="SU9-hC-kE4" id="ZuC-eo-fL0"/>
+                <outlet property="DeleteOutlet" destination="7ot-MW-H7e" id="uIG-7t-QhE"/>
+                <outlet property="questionLabel" destination="sOf-Wi-sph" id="Hsb-z7-sd7"/>
+                <outlet property="segmentAnswerOutlet" destination="fQm-oW-LDd" id="Zvc-sl-uiv"/>
+            </connections>
+            <point key="canvasLocation" x="285.50724637681162" y="164.73214285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="pencil.tip.crop.circle.badge.plus" catalog="system" width="128" height="108"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
